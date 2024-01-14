@@ -4,13 +4,12 @@
 
 const generateIntArray = (...Range) => {
   let [from, to] = Range;
-  if (to >= from) {
-    Range = new Array(to - from + 1);
-    for (let i = from; i <= to; i++) {
-      Range[i - from] = i;
-    }
-  } else {
+  if (to < from) {
     return [];
+  }
+  Range = new Array(to - from + 1);
+  for (let i = from; i <= to; i++) {
+    Range[i - from] = i;
   }
   return Range;
 };
