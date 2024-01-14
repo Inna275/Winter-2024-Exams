@@ -2,14 +2,15 @@
 
 'use strict';
 
-const pickValues = (W, ...only) => {
-  const X = Object.keys(W);
+const pickValues = (obj, ...keys) => {
+  const result = {};
+  const X = Object.keys(obj);
   X.forEach((Z) => {
-    if (!only.includes(Z)) {
-      delete W[Z];
+    if (keys.includes(Z)) {
+      result[Z] = obj[Z];
     }
   });
-  return W;
+  return result;
 };
 
 module.exports = pickValues;
