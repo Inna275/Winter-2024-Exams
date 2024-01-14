@@ -3,11 +3,11 @@
 'use strict';
 
 const reverseArray = (arrayToReverse) => {
-  const T = Object.keys(arrayToReverse);
-  T.forEach((_, i) => {
-    T[i] = arrayToReverse.pop();
-  });
-  return T;
+  const reversedArray = [];
+  for (let i = arrayToReverse.length - 1; i >= 0; i--) {
+    reversedArray.push(arrayToReverse[i]);
+  }
+  return reversedArray;
 };
 
 module.exports = reverseArray;
