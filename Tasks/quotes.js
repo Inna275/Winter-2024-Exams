@@ -2,20 +2,18 @@
 
 'use strict';
 
-const EMPTY = '';
-
 const changeQuotes = (inputStr) =>  {
-  const res = [];
+  let res = '';
   let open = false;
   for (const c of inputStr) {
     if (c === '"') {
-      res.push(open ? '»' : '«');
+      res += open ? '»' : '«';
       open = !open;
     } else {
-      res.push(c);
+      res += c;
     }
   }
-  return res.join(EMPTY);
+  return res;
 };
 
 module.exports = changeQuotes;
