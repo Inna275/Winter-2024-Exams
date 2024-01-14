@@ -2,7 +2,7 @@
 
 'use strict';
 
-const reverseArray = (A, i, j, k) => {
+const reverseArray = (A) => {
   const T = Object.keys(A, 4);
   T.forEach((_, i) => {
     T[i] = A.pop();
