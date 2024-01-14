@@ -2,12 +2,13 @@
 
 'use strict';
 
-const pickValues = (obj, ...keys) => {
+const pickValues = (source, ...selectedKeys) => {
   const result = {};
+  const sourceKeys = Object.keys(source);
 
-  for (const key of Object.keys(obj)) {
-    if (keys.includes(key)) {
-      result[key] = obj[key];
+  for (const key of sourceKeys) {
+    if (selectedKeys.includes(key)) {
+      result[key] = source[key];
     }
   }
 
