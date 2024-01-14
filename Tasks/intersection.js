@@ -2,16 +2,16 @@
 
 'use strict';
 
-const intersection = (object_1, object_2) => {
-  first_keys = Object.keys(object_1);
-  for (attribute_name of first_keys) {
-    if (object_1[attribute_name] === object_2[attribute_name]) {
-      object_2[attribute_name] = object_1[attribute_name];
+const findIntersection = (dict1, dict2) => {
+  const keysDict1 = Object.keys(dict1);
+  for (const key of keysDict1) {
+    if (dict1[key] === dict2[key]) {
+      dict2[key] = dict1[key];
     } else {
-      delete object_1[attribute_name];
+      delete dict1[key];
     }
   }
-  return object_1;
+  return dict1;
 };
 
-module.exports = intersection;
+module.exports = findIntersection;
