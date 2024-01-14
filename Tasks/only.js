@@ -4,12 +4,13 @@
 
 const pickValues = (obj, ...keys) => {
   const result = {};
-  const X = Object.keys(obj);
-  X.forEach((Z) => {
-    if (keys.includes(Z)) {
-      result[Z] = obj[Z];
+
+  for (const key of Object.keys(obj)) {
+    if (keys.includes(key)) {
+      result[key] = obj[key];
     }
-  });
+  }
+
   return result;
 };
 
