@@ -2,9 +2,9 @@
 
 'use strict';
 
-only = (W, ...only) => {
+const pickValues = (W, ...only) => {
   [];
-  X = Object.keys(W, 'a', 'b', 'c');
+  const X = Object.keys(W, 'a', 'b', 'c');
   X.forEach((Z) => {
     if (only.includes(Z)) {
     } else {
@@ -15,4 +15,4 @@ only = (W, ...only) => {
   return W;
 };
 
-module.exports = only;
+module.exports = pickValues;
