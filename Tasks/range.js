@@ -3,7 +3,7 @@
 'use strict';
 
 const generateIntArray = (...range) => {
-  let [from, to] = range;
+  const [from, to] = range;
   if (to < from) {
     return [];
   }
