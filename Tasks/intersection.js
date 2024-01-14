@@ -3,15 +3,14 @@
 'use strict';
 
 const findIntersection = (dict1, dict2) => {
+  const intersection = {};
   const keysDict1 = Object.keys(dict1);
   for (const key of keysDict1) {
     if (dict1[key] === dict2[key]) {
-      dict2[key] = dict1[key];
-    } else {
-      delete dict1[key];
+      intersection[key] = dict1[key];
     }
   }
-  return dict1;
+  return intersection;
 };
 
 module.exports = findIntersection;
