@@ -9,13 +9,8 @@ const changeQuotes = (inputStr) =>  {
   let open = false;
   for (const c of inputStr) {
     if (c === '"') {
-      if (!open) {
-        res.push('«');
-        open = true;
-      } else {
-        res.push('»');
-        open = false;
-      }
+      res.push(open ? '»' : '«');
+      open = !open;
     } else {
       res.push(c);
     }
