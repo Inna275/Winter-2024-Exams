@@ -2,12 +2,15 @@
 
 'use strict';
 
+const INDEX_OFFSET = 1;
+
 const generateIntArray = (...range) => {
   const [from, to] = range;
   if (to < from) {
     return [];
   }
-  const resultArray = new Array(to - from + 1);
+  const arrayLength = to - from + INDEX_OFFSET;
+  const resultArray = new Array(arrayLength);
   for (let i = from; i <= to; i++) {
     resultArray[i - from] = i;
   }
