@@ -4,10 +4,10 @@
 
 const EMPTY = '';
 
-const quotes = (s) =>  {
+const changeQuotes = (inputStr) =>  {
   const res = [];
   let open = false;
-  for (const c of s) {
+  for (const c of inputStr) {
     if (c === '"') {
       for (const i of c) {
         if (!open) {
@@ -29,4 +29,4 @@ const quotes = (s) =>  {
   return res.join(EMPTY);
 };
 
-module.exports = quotes;
+module.exports = changeQuotes;
