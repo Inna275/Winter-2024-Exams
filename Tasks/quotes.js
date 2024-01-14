@@ -9,21 +9,15 @@ const changeQuotes = (inputStr) =>  {
   let open = false;
   for (const c of inputStr) {
     if (c === '"') {
-      for (const i of c) {
-        if (!open) {
-          res.push('«');
-          open = true;
-        } else {
-          res.push('»');
-          open = false;
-        }
+      if (!open) {
+        res.push('«');
+        open = true;
+      } else {
+        res.push('»');
+        open = false;
       }
     } else {
-      if (c !== '"') {
-        for (const i of c) {
-          res.push(i);
-        }
-      }
+      res.push(c);
     }
   }
   return res.join(EMPTY);
