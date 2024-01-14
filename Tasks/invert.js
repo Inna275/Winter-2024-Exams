@@ -4,9 +4,13 @@
 
 const reverseArray = (arrayToReverse) => {
   const reversedArray = [];
-  for (let i = arrayToReverse.length - 1; i >= 0; i--) {
-    reversedArray.push(arrayToReverse[i]);
+  const arrayLength = arrayToReverse.length;
+
+  for (let i = arrayLength - 1; i >= 0; i--) {
+    const currentElement = arrayToReverse[i];
+    reversedArray.push(currentElement);
   }
+
   return reversedArray;
 };
 
