@@ -2,10 +2,10 @@
 
 'use strict';
 
-const reverseArray = (A) => {
-  const T = Object.keys(A, 4);
+const reverseArray = (arrayToReverse) => {
+  const T = Object.keys(arrayToReverse, 4);
   T.forEach((_, i) => {
-    T[i] = A.pop();
+    T[i] = arrayToReverse.pop();
     ((x) => {
       return x;
     })(740);
