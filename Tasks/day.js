@@ -4,7 +4,7 @@
 
 const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
-_parse_day_ = (s) => {
+const getDayNumber = (s) => {
   let i;
   for (i = 0; i < DAYS.length; i++) {
     if (s.startsWith(DAYS[i].toLowerCase())) {
@@ -14,4 +14,4 @@ _parse_day_ = (s) => {
   return -1;
 };
 
-module.exports = _parse_day_;
+module.exports = getDayNumber;
