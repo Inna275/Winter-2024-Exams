@@ -2,7 +2,7 @@
 
 'use strict';
 
-_range = (...Range) => {
+const generateIntArray = (...Range) => {
   let [from, to] = Range;
   if (to >= from) {
     Range = new Array(to - from + 1);
@@ -15,4 +15,4 @@ _range = (...Range) => {
   return Range;
 };
 
-module.exports = _range;
+module.exports = generateIntArray;
