@@ -2,6 +2,8 @@
 
 'use strict';
 
-const getRandomElement = (arr) => arr[Math.floor(Math.random() * arr.length)];
+const getRandomIndex = (arr) => Math.floor(Math.random() * arr.length);
+
+const getRandomElement = (arr) => arr[getRandomIndex(arr)];
 
 module.exports = getRandomElement;
