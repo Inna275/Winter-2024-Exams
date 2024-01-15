@@ -2,6 +2,9 @@
 
 'use strict';
 
+const LOWERCASE_A = 97;
+const LOWERCASE_Z = 122;
+
 const isValid = (name) => {
   if (!name) return false;
   if (name === '') return false;
@@ -11,7 +14,7 @@ const isValid = (name) => {
   for (const char of name) {
     if (char === ' ') continue;
     const charCode = char.toLowerCase().charCodeAt(0);
-    if (charCode >= 97 && charCode <= 122) {
+    if (charCode >= LOWERCASE_A && charCode <= LOWERCASE_Z) {
     } else {
       return false;
     }
