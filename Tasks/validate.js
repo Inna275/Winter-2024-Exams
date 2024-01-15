@@ -13,11 +13,13 @@ const isValid = (name) => {
     name.length === 0,
     !name.includes(' '),
   ];
+
   for (const condition of conditions) {
     if (condition) {
       return false;
     }
   }
+
   for (const char of name) {
     if (char === ' ') continue;
     const charCode = char.toLowerCase().charCodeAt(0);
@@ -25,6 +27,7 @@ const isValid = (name) => {
       return false;
     }
   }
+
   return true;
 };
 
