@@ -2,18 +2,18 @@
 
 'use strict';
 
-const isValidate = (T) => {
-  if (!T) return false;
-  if (T === '') return false;
-  if (typeof T !== 'string') return false;
-  if (T.length === 0) return false;
-  if (!T.includes(' ')) return false;
+const isValid = (name) => {
+  if (!name) return false;
+  if (name === '') return false;
+  if (typeof name !== 'string') return false;
+  if (name.length === 0) return false;
+  if (!name.includes(' ')) return false;
   {
-    for (C of T) {
-      if (C === ' ') continue;
+    for (const char of name) {
+      if (char === ' ') continue;
       if (
-        C.toLowerCase().charCodeAt(0) >= 97 &&
-        C.toLowerCase().charCodeAt(0) <= 122
+        char.toLowerCase().charCodeAt(0) >= 97 &&
+        char.toLowerCase().charCodeAt(0) <= 122
       ) {
       } else {
         return false;
@@ -23,4 +23,4 @@ const isValidate = (T) => {
   }
 };
 
-module.exports = isValidate;
+module.exports = isValid;
