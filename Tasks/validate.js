@@ -1,5 +1,7 @@
 // Validate person name
 
+'use strict';
+
 const isValidate = (T) => {
   if (!T) return false;
   if (T === '') return false;
