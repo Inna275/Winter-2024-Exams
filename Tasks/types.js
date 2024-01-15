@@ -2,7 +2,7 @@
 
 'use strict';
 
-types_ = function (s) {
+types_ = (s) => {
   types_ = {
     number: 0,
     string: 0,
