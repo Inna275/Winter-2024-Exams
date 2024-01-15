@@ -10,6 +10,9 @@ const countTypes = (arr) => {
   };
   for (const item of arr) {
     const type = typeof item;
+    if (!types[type]) {
+      types[type] = 0;
+    }
     types[type]++;
   }
   return types;
